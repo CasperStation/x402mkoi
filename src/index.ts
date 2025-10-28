@@ -36,7 +36,7 @@ app.use(
   ),
 );
 
-app.get("/mint", c => {
+app.get("/pay", c => {
   return c.json({
     report: {
       weather: "Done",
