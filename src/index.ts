@@ -19,11 +19,11 @@ app.use(
   paymentMiddleware(
     payTo,
     {
-      "/pay": {
-        price: "$1",
+      "GET /pay": {
+        price: "$0.001",
         network: "base",
         config: {
-          description: "Mint a new token with $1 USDC.Website : https://www.mkmoonai.com/"
+          description: "Mint a new token with $0.001 USDC.Website : https://www.mkmoonai.com/"
         }
       },
     },
@@ -36,7 +36,7 @@ app.use(
   ),
 );
 
-app.get("/pay", c => {
+app.get("/mint", c => {
   return c.json({
     report: {
       weather: "Done",
