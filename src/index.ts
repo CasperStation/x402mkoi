@@ -35,8 +35,27 @@ app.get("/mint", c => {
   return c.json({
     report: {
       weather: "Done",
-      temperature: 70,
+     
     },
+  });
+});
+
+app.get("/", c => {
+  return c.json({
+    version: 1,
+    name: "MKMOON AI",
+    description: "Mint MKMOON token with 1 USDC via x402 protocol.",
+    image: "https://pbs.twimg.com/profile_images/1978862702182236160/XpOw1Mp__400x400.jpg",
+    website: "https://www.mkmoonai.com/",
+    resources: [
+      {
+        path: "/mint",
+        network: "base",
+        price: "$1",
+        asset: "USDC",
+        description: "Mint MKMOON token",
+      },
+    ],
   });
 });
 
